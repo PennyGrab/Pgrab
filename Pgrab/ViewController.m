@@ -134,7 +134,7 @@ static User *Uinfo = nil;
         UPWD = @"";
     }
     
-    NSString *fil = @"http://192.168.0.196/pg_mobile_lib.php?register=1";
+    NSString *fil = @"http://www.pennygrab.com/pg_mobile_lib.php?register=1";
     
     NSString *URL = [NSString stringWithFormat:
                      @"%@&reg_email=%@&uname=%@&passwd=%@",fil,
@@ -182,7 +182,7 @@ static User *Uinfo = nil;
         UPWD = @"";
     }
     
-    NSString *fil = @"http://192.168.0.196/pg_mobile_lib.php?login=1";
+    NSString *fil = @"http://www.pennygrab.com/pg_mobile_lib.php?login=1";
     
     NSString *URL = [NSString stringWithFormat:
                      @"%@&reg_email=%@&uname=%@&passwd=%@",fil,
@@ -583,7 +583,7 @@ bool firstGet = YES;
     else
     {
         NSURL *URL = [NSURL URLWithString: [NSString stringWithFormat:
-                      @"http://192.168.0.196/bid_mobile.php?auc_id=%@",[sender currentTitle]]];
+                      @"http://www.pennygrab.com/bid_mobile.php?auc_id=%@",[sender currentTitle]]];
         
         NSURLRequest *request = [NSURLRequest requestWithURL:URL];
         
@@ -1040,9 +1040,9 @@ bool firstGet = YES;
     NSURL *URL =  nil;   //int objlen = [aucobjs count];
     
     if ( firstGet || uinfo.force_reload == nil)
-        URL = [NSURL URLWithString: @"http://192.168.0.196/auc_info_mobile.php?force_update=1"];
+        URL = [NSURL URLWithString: @"http://www.pennygrab.com/auc_info_mobile.php?force_update=1"];
     else
-        URL = [NSURL URLWithString: @"http://192.168.0.196/auc_info_mobile.php"];
+        URL = [NSURL URLWithString: @"http://www.pennygrab.com/auc_info_mobile.php"];
     
     firstGet = NO;
     uinfo.force_reload = @"0";
@@ -1090,7 +1090,7 @@ bool firstGet = YES;
     UIButton *blitzbtn = nil;
     NSString *URL = nil;
     UIImage *pImage = nil;
-    NSString *fimg = @"http://192.168.0.196/prodImages/";
+    NSString *fimg = @"http://www.pennygrab.com/prodImages/";
     NSString *range = nil;
     NSString *price = nil;
     
@@ -1341,7 +1341,7 @@ bool firstGet = YES;
 -(void) UpdateAuctions
 {
     NSURL *auctionURL = [NSURL URLWithString: [NSString stringWithFormat:
-                                            @"http://192.168.0.196/auc_updates.php?aucStr=%@",allAucs]];
+                                            @"http://www.pennygrab.com/auc_updates.php?aucStr=%@",allAucs]];
     
     dispatch_queue_t AuctionQueue = dispatch_queue_create("com.pg.auction", 0);
     
@@ -1432,7 +1432,9 @@ bool firstGet = YES;
     
     aucobjs = [[NSMutableArray alloc] init];
     
-    NSURL *auctionURL = [NSURL URLWithString: @"http://192.168.0.196/auc_updates_mobile.php"];
+    //NSURL *auctionURL = [NSURL URLWithString: @"http://www.pennygrab.com/auc_updates_mobile.php"];
+    NSURL *auctionURL = [NSURL URLWithString: @"http://www.pennygrab.com/auc_updates_mobile.php"];
+    
     
     dispatch_queue_t AuctionQueue = dispatch_queue_create("com.pg.auction", 0);
     
