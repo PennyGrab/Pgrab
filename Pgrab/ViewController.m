@@ -134,6 +134,8 @@ static User *Uinfo = nil;
         UPWD = @"";
     }
     
+    // new user URL
+    //
     NSString *fil = @"http://www.pennygrab.com/pg_mobile_lib.php?register=1";
     
     NSString *URL = [NSString stringWithFormat:
